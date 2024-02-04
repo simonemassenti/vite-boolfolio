@@ -1,10 +1,11 @@
 <script>
 import PortfolioCard from '../components/PortfolioCard.vue';
 import axios from 'axios';
+import { store } from '../store';
 export default {
     data() {
         return {
-            base_url: "http://127.0.0.1:8000",
+            store,
             portfolios: [],
             loading: false
         };
@@ -12,7 +13,7 @@ export default {
     created() {
         this.loading = true;
         axios
-            .get(`${this.base_url}/api/portfolios`)
+            .get(`${this.store.base_url}/api/portfolios`)
             .then((resp) => {
                 console.log(resp);
                 this.portfolios = resp.data.results;

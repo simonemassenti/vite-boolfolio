@@ -19,6 +19,7 @@ export default {
                     <div class="card-body">
                         <h5 class="card-title">{{ portfolio.title }}</h5>
                         <p class="card-text">{{ portfolio.description }}</p>
+                        <router-link :to="{name: 'single-portfolio', params: {slug: portfolio.slug }}" class="btn btn-primary">Dettagli</router-link>
                     </div>
                 </div>
             </div>
