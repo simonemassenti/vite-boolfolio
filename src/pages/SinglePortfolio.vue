@@ -46,7 +46,10 @@ export default {
                 <p class="card-text">
                     <h6 class="d-inline">Slug:</h6> {{ portfolio.slug }}</p>
                 <div v-if="portfolio.type">
-                    <h6>Type: <span class="badge bg-primary">{{ portfolio?.type.name }}</span></h6>
+                    <h6>Type: <span class="badge bg-primary">{{ portfolio.type.name }}</span></h6>
+                </div>
+                <div v-if="portfolio.technologies.length > 0">
+                    <h6>Tech: <span v-for="tech in portfolio.technologies" class="badge me-1" :style="{'background-color': tech.hex_color}">{{ tech.name }}</span></h6>
                 </div>
 
             </div>
