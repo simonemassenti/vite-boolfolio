@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage.vue';
 import AboutPage from './pages/AboutPage.vue';
 import PortfoliosPage from './pages/PortfoliosPage.vue';
 import SinglePortfolio from './pages/SinglePortfolio.vue';
+import NotFoundPage from './pages/NotFoundPage.vue';
 const router = createRouter ({
     history: createWebHistory(),
     routes: [
@@ -25,6 +26,11 @@ const router = createRouter ({
             path: '/portfolios/:slug',
             name: 'single-portfolio',
             component: SinglePortfolio
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'not-found',
+            component: NotFoundPage
         }
     ]
 });

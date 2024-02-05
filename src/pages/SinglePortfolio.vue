@@ -17,7 +17,12 @@ export default {
             .get(`${store.base_url}/api/portfolios/${this.$route.params.slug}`)
             .then((resp) => {
                 console.log(resp);
-                this.portfolio = resp.data.result;
+                if(resp.data.success){
+                  this.portfolio = resp.data.result;  
+                } else {
+                    this.$router.push({name: 'not-found'});
+                }
+                
             })
             .finally(() => {
                 this.loading = false;
