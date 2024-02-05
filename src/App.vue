@@ -22,5 +22,5 @@ export default{
 
 <style lang="scss">
 @use "./assets/styles/general.scss" as *;
-
+@use "@fortawesome/fontawesome-free/css/all.css" as *;
 </style>

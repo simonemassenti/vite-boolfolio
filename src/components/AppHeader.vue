@@ -19,7 +19,7 @@ export default {
     <div class="collapse navbar-collapse e-auto" id="navbarNav">
       <ul class=" ms-auto navbar-nav">
         <li class="nav-item">
-          <router-link :to="{name: 'home'}" class="btn btn-primary " >Home</router-link>
+          <router-link :to="{name: 'home'}" class="btn btn-primary" >Home</router-link>
         </li>
         <li class="nav-item">
             <router-link :to="{name: 'about'}" class="btn btn-primary mx-2">About Us</router-link>
